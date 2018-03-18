@@ -35,7 +35,7 @@ html { -webkit-text-size-adjust: none;}
 img{max-width:100%;	height: auto;width: auto\9; /* ie8 */}
 
 a{color: #212121;text-decoration: none;}
-a:hover { transition: text-shadow 0.3s ease-in 0s, color 0.3s ease-in 0s;text-shadow: 2px 2px 0px #F9BD28;}
+a:hover { transition: text-shadow 0.3s ease-in 0s, color 0.3s ease-in 0s;text-shadow: 2px 2px 0px #1b93fb;}
 
 h1, h2 	{font-size: 25px;line-height: 25px;}
 h3, h4	{font-size: 20px;line-height: 20px;}
@@ -66,7 +66,7 @@ body .wrap-body{}
 /* ---------------------------------------------------------------------------- */
 /* -------------------------------------Header--------------------------------- */
 /* ---------------------------------------------------------------------------- */
-.top{background: #FFCD02;color: #333;padding: 7px 0;font-size: 13px;}
+.top{background: #028aff;color: #fff;padding: 7px 0;font-size: 13px;}
 .top i.fa{font-size: 18px;margin-right: 4px;line-height: 1.2}
 .top span{ margin-right: 10px;}
 
@@ -93,7 +93,7 @@ header .logo img{display: inline-block;margin: auto;padding: 10px;max-width: 210
 /* ---content-box--- */
 .content-box {padding: 50px 0;}
 .content-box .title{margin-bottom: 70px;color: #fff;text-transform: uppercase}
-.content-box .title h2{color: #FFCD02; font-family: rubik one;font-size: 60px;line-height: 1.2;}
+.content-box .title h2{color: #1b93fb; font-family: rubik one;font-size: 60px;line-height: 1.2;}
 .content-box .title h2 span{font-size: 48px;font-family: "Oswald",Arial,Helvetica,"Nimbus Sans L",sans-serif;color: #fff;line-height: 1.5;}
 .content-box .sub-title{background: #CB0001;display: inline-block;margin-bottom: 20px;padding: 10px;}
 .content-box .sub-title h2{color: #fff;font-size: 20px;}
@@ -161,8 +161,8 @@ article  h1.entry-title{line-height: 1.2;font-size: 38px;}
 .widget.wid-related img{ max-width: 243px; width: 100%;border:1px solid #DDD;}
 .widget.wid-related h4{margin-top: 10px;}
 
-.contact-header {background-color: #FFCD02;padding: 15px 20px;}
-.contact-header h5 {font-size: 17px;color: #333;text-transform: uppercase;}
+.contact-header {background-color: #1b93fb;padding: 15px 20px;}
+.contact-header h5 {font-size: 17px;color: #fff;text-transform: uppercase;}
 
 .post:after, .post:before{clear: both; content: '\0020'; display: block; visibility: hidden; width: 0; height: 0;}
 .post img{float: left; margin: 15px 10px; width: 100px;}
@@ -211,13 +211,14 @@ a.button{
 	text-decoration: none;
 	background: #303030;
 	margin: 5px 0;
+	padding: 0.7%;
 	text-transform: uppercase;
 	color: #fff;
 }
 a.button:hover{opacity: 0.9;}
 
-a.button.bt1 {background: #FFCD02;color: #333;padding: 10px 20px;text-align: center;text-shadow: none;font-weight: bold;border: none;margin-top: 20px;}
-a.button.bt1:hover {background: #333;color: #FFCD02; }
+a.button.bt1 {background: #1b93fb;color: #fff;padding: 10px 20px;text-align: center;text-shadow: none;font-weight: bold;border: none;margin-top: 20px;}
+a.button.bt1:hover {background: #333;color: #1b93fb; }
 a.button.bt2 {background: #0000ff;color: #ffffff;}
 
 /* ---------------------------------------------------------------------------- */
@@ -232,8 +233,8 @@ a.button.bt2 {background: #0000ff;color: #ffffff;}
 
 #ff textarea {display:block;width:100%;height:183px; border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px;background-color:#fff; color:#000;	border:1px solid #AFAFAF;padding:10px;margin: 5px 0 25px 0;}
 
-#ff .sendButton {cursor:pointer;background-color: transparent;width:15%;color:#333;border: 3px solid #333;color: #333;font-size: 20px;padding: 8px 0 10px;}
-#ff .sendButton:hover {background: #FFCD02;border: 3px solid #FFCD02; }
+#ff .sendButton {cursor:pointer;background-color: transparent;width:20%;color:#333;border: 3px solid #333;color: #333;font-size: 20px;padding: 8px 0 10px;}
+#ff .sendButton:hover {background: #1b93fb;border: 3px solid #1b93fb; }
 
 .maps{margin: 10px 0 20px;}
 /* ---------------------------------------------------------------------------- */
