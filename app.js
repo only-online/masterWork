@@ -5,6 +5,11 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var exphbs  = require('express-handlebars');
+var expressValidator = require('express-validator');
+var expressSession = require('express-session');
+var Sequelize = require('sequelize');
+var config = require('./config-data/config');
+
 
 var index = require('./routes/index');
 var users = require('./routes/users');
@@ -26,9 +31,10 @@ app.set('view engine', 'hbs');
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(expressValidator());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
+app.use(expressSession({secret: 'max', saveUninitialized: false, resave: false}));
 app.use('/', index);
 //app.use('/single', single);
 app.use('/users', users);
@@ -50,5 +56,29 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+var sequelize = new Sequelize(config.connectArray.database, config.connectArray.user_name, config.connectArray.password, {
+    host: config.connectArray.host,
+    dialect: config.connectArray.dialect,
+    operatorsAliases: false,
+
+    pool: {
+        max: 5,
+        min: 0,
+        acquire: 30000,
+        idle: 10000
+    }
+});
+
+sequelize
+    .authenticate()
+    .then(() => {
+    console.log('Connection has been established successfully.');
+    sequelize.close();
+})
+.catch(err => {
+    console.error('Unable to connect to the database:', err);
+});
+
 
 module.exports = app;
