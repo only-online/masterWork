@@ -1,13 +1,19 @@
-var sequelize = require('sequelize');
+module.exports = (sequelize, DataTypes) => {
+    let Main;
 
-var Main = sequelize.define('msrw_main', {
-    id: {
-        type: Sequelize.INTEGER
-    },
-    createdate: {
-        type: Sequelize.DATE
-    },
-    changedate:{
-        type: Se
-    }
-});
+    const schema = {
+        id: DataTypes.INTEGER,
+        createddate: DataTypes.DATE,
+        changedate: DataTypes.DATE,
+        creator: DataTypes.INTEGER,
+        changer: DataTypes.INTEGER,
+        deleted: DataTypes.TINYINT,
+        categoty: DataTypes.STRING,
+        label: DataTypes.STRING,
+        description: DataTypes.TEXT
+    };
+
+    Main = sequelize.define(`${settings.connectArray.prefix}main`, schema);
+
+    return Main;
+};

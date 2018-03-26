@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    let User;
+    let Comments;
 
     const schema = {
         id: DataTypes.INTEGER,
@@ -20,36 +20,7 @@ module.exports = (sequelize, DataTypes) => {
         }
     };
 
-    const options = {
-        paranoid: true,
-        classMethods: {
-            authOrCreate (username, done) {
-                const query = {
-                    where: {
-                        username
-                    },
-                    defaults: {
-                        password: generatePassword()
-                    }
-                };
-                this.findOrCreate(query).spread((user, created) => {
-                    if (created) {
-                        done(null, user);
-                    } else {
-                        done(null, user);
-                    }
-                }, (err) => {
-                    done(err);
-                });
-            },
-
-            associate (models) {
-                User.hasMany(models.Order);
-            }
-        }
-    };
-
-    User = sequelize.define(`${settings.connectArray.prefix}comments`, schema, options);
+    Comments = sequelize.define(`${settings.connectArray.prefix}comments`, schema);
 
     return Comments;
 };
